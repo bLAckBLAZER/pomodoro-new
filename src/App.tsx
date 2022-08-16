@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import { Routes, Route } from "react-router-dom";
+import "./styles/index.css";
+import { NavBar } from "./components";
+import Logo from "./assets/images/clock_logo.png";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={`wrapper justify-between`}>
+      <NavBar title="Subtle Clock" logo={Logo} />
+      {/* <Routes>
+        <Route element={<Redirect />}>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+        </Route>
+        <Route element={<PrivateRoute />}>
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/pomodoro" element={<Pomodoro />} />
+        </Route>
+        <Route
+          path="*"
+          element={
+            <PageNotFound
+              errorMsg="Oops! Looks like you have lost your way. The page you're looking for
+does not exist.
+"
+              gotoMsg="Go to Homepage"
+              gotoPath="/"
+            />
+          }
+        />
+      </Routes> */}
+      {/* <Footer /> */}
     </div>
   );
-}
+};
 
 export default App;

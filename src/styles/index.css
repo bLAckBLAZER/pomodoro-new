@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Dancing+Script&family=Comfortaa&display=swap");
+
+@import url(./utils.css);
+
+:root {
+  --primary-color: #50bdff;
+  --background-color: white;
+  --title-font-family: "Dancing Script", cursive;
+  --dark-background-color: #001845;
+  --dark-taskbar-color: #0353a4;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: "Comfortaa", cursive;
+}
+
+input,
+button {
+  font-family: inherit;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.fas.fa-heart {
+  color: red;
+}
+
+.title {
+  color: var(--text-color);
+  font-size: 2rem;
+  font-weight: var(--weight-bold);
+  margin: 3rem 0 1.5rem 0;
+}
+
+.subtitle {
+  color: var(--text-color);
+  font-size: 1.2rem;
+}
+
+.main-container {
+  background-color: var(--primary-color);
+  height: 100%;
+}
+
+.task-container {
+  height: 100vh;
+  background-color: var(--text-color);
+  border-radius: 20px;
+  margin: 1.5rem 0;
+  padding: 3rem;
+}
+
+.heading {
+  font-size: 1.5rem;
+  font-weight: var(--weight-bold);
+}
+
+i {
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
+i:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.task-complete {
+  color: var(--inactive-color);
+}
+
+.btn {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: underline;
+}
+
+.dark {
+  background-color: var(--dark-background-color);
+  color: var(--pure-white);
+}
+
+.dark a {
+  color: var(--pure-white);
+}
+
+.dark.task-container {
+  background-color: var(--dark-taskbar-color);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-btn-hover);
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
