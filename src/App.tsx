@@ -1,7 +1,7 @@
 import logo from "./logo.svg";
 import { Routes, Route } from "react-router-dom";
 import "./styles/index.css";
-import { NavBar } from "./components";
+import { NavBar, Footer } from "./components";
 import Logo from "./assets/images/clock_logo.png";
 
 const App = () => {
@@ -31,7 +31,7 @@ does not exist.
           }
         />
       </Routes> */}
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };

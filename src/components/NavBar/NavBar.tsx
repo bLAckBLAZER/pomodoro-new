@@ -1,9 +1,9 @@
 import "../../styles/navbar.css";
 import { Link, useNavigate } from "react-router-dom";
-// import { useTheme } from "../../contexts/ThemeContext";
-// import { getTheme } from "../../utils/getTheme";
-// import { useAuth, useTasks } from "../../contexts";
-// import { userLogout } from "../../utils/authenticationCalls";
+import { useTheme } from "../../contexts/ThemeContext";
+import { getTheme } from "../../utils/getTheme";
+import { useAuth, useTasks } from "../../contexts";
+import { userLogout } from "../../utils/authenticationCalls";
 
 type NavBarProps = {
   title: string;
@@ -11,19 +11,19 @@ type NavBarProps = {
 };
 
 export const NavBar = ({ title, logo }: NavBarProps) => {
-  // const { theme, setTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
 
-  // const {
-  //   authState: { token },
-  //   dispatchAuth,
-  // } = useAuth();
+  const {
+    authState: { token },
+    dispatchAuth,
+  } = useAuth();
 
-  // const { dispatchTasks } = useTasks();
+  const { dispatchTask } = useTasks();
 
   const navigate = useNavigate();
 
-  const token = "temp-value";
-  const theme = "dark";
+  // const token = "temp-value";
+  // const theme = "dark";
 
   return (
     <nav className={`navbar fixed}`}>
@@ -40,7 +40,7 @@ export const NavBar = ({ title, logo }: NavBarProps) => {
           {token ? (
             <button
               className="btn btn-primary"
-              // onClick={() => userLogout(dispatchAuth, dispatchTasks, navigate)}
+              onClick={() => userLogout(dispatchAuth, dispatchTask, navigate)}
             >
               Logout
             </button>
@@ -53,7 +53,7 @@ export const NavBar = ({ title, logo }: NavBarProps) => {
         <li className="nav-action-item">
           <i
             className={`far ${theme === "dark" ? "fa-sun" : "fa-moon"} fa-2x`}
-            // onClick={() => setTheme(theme === "dark" ? "theme" : "dark")}
+            onClick={() => setTheme(theme === "dark" ? "theme" : "dark")}
           ></i>
         </li>
       </ul>
