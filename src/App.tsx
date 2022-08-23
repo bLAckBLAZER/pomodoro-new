@@ -4,7 +4,7 @@ import "./styles/index.css";
 import { NavBar, Footer } from "./components";
 import Logo from "./assets/images/clock_logo.png";
 import { Redirect } from "./router";
-import { Homepage } from "./pages";
+import { Homepage, Login } from "./pages";
 import { getTheme } from "./utils/getTheme";
 import { useTheme } from "./contexts/ThemeContext";
 
@@ -17,8 +17,8 @@ const App = () => {
       <Routes>
         <Route element={<Redirect />}>
           <Route path="/" element={<Homepage />} />
-          {/* <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} /> */}
+          <Route path="/login" element={<Login />} />
+          {/* <Route path="/signup" element={<Signup />} /> */}
         </Route>
         {/* <Route element={<PrivateRoute />}>
           <Route path="/dashboard" element={<Dashboard />} />

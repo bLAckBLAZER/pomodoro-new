@@ -4,5 +4,5 @@ export { Footer } from "./Footer/Footer";
 // export { Modal } from "./Modal/Modal";
 export { Hero } from "./Hero/Hero";
 // export { PageNotFound } from "./PageNotFound/PageNotFound";
-// export { Box } from "./Box/Box";
-// export { Input } from "./Input/Input";
+export { Box } from "./Box/Box";
+export { Input } from "./Input/Input";
