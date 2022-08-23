@@ -5,10 +5,14 @@ import { NavBar, Footer } from "./components";
 import Logo from "./assets/images/clock_logo.png";
 import { Redirect } from "./router";
 import { Homepage } from "./pages";
+import { getTheme } from "./utils/getTheme";
+import { useTheme } from "./contexts/ThemeContext";
 
 const App = () => {
+  const { theme } = useTheme();
+
   return (
-    <div className={`wrapper justify-between`}>
+    <div className={`wrapper justify-between ${getTheme(theme)}`}>
       <NavBar title="Subtle Clock" logo={Logo} />
       <Routes>
         <Route element={<Redirect />}>

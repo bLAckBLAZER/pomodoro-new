@@ -1,12 +1,15 @@
 import "../../styles/footer.css";
-// import { useTheme } from "../../contexts/ThemeContext";
-// import { getTheme } from "../../utils/getTheme";
+import { useTheme } from "../../contexts/ThemeContext";
+import { getTheme } from "../../utils/getTheme";
 
 export const Footer = () => {
-  // const { theme } = useTheme();
+  const { theme } = useTheme();
 
   return (
-    <footer className={`footer`} style={{ alignSelf: "flex-end" }}>
+    <footer
+      className={`footer ${getTheme(theme)}`}
+      style={{ alignSelf: "flex-end" }}
+    >
       <div className="footer-heading">Made with ❤️ by Omkar Jadhav</div>
       <ul className="socials">
         <li>

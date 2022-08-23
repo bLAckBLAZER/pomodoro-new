@@ -26,7 +26,7 @@ export const NavBar = ({ title, logo }: NavBarProps) => {
   // const theme = "dark";
 
   return (
-    <nav className={`navbar fixed}`}>
+    <nav className={`navbar fixed ${getTheme(theme)}`}>
       <Link to="/">
         <div className="flex align-ctr justify-ctr">
           <div className="nav-logo">
