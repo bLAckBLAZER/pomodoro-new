@@ -3,18 +3,20 @@ import { Routes, Route } from "react-router-dom";
 import "./styles/index.css";
 import { NavBar, Footer } from "./components";
 import Logo from "./assets/images/clock_logo.png";
+import { Redirect } from "./router";
+import { Homepage } from "./pages";
 
 const App = () => {
   return (
     <div className={`wrapper justify-between`}>
       <NavBar title="Subtle Clock" logo={Logo} />
-      {/* <Routes>
+      <Routes>
         <Route element={<Redirect />}>
           <Route path="/" element={<Homepage />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
+          {/* <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} /> */}
         </Route>
-        <Route element={<PrivateRoute />}>
+        {/* <Route element={<PrivateRoute />}>
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/pomodoro" element={<Pomodoro />} />
         </Route>
@@ -29,8 +31,8 @@ does not exist.
               gotoPath="/"
             />
           }
-        />
-      </Routes> */}
+        /> */}
+      </Routes>
       <Footer />
     </div>
   );
