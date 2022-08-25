@@ -1,0 +1,13 @@
+.pomodoro-circle {
+  display: flex;
+  justify-content: space-around;
+  width: 20rem;
+  height: 20rem;
+  margin-bottom: 2rem;
+}
+
+.task-detail {
+  height: 20rem;
+  overflow-y: scroll;
+  font-size: 1.25rem;
+}

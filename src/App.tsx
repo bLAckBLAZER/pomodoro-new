@@ -4,7 +4,7 @@ import "./styles/index.css";
 import { NavBar, Footer } from "./components";
 import Logo from "./assets/images/clock_logo.png";
 import { Redirect, PrivateRoute } from "./router";
-import { Homepage, Login, Signup, Dashboard } from "./pages";
+import { Homepage, Login, Signup, Dashboard, Pomodoro } from "./pages";
 import { getTheme } from "./utils/getTheme";
 import { useTheme } from "./contexts/ThemeContext";
 
@@ -22,7 +22,7 @@ const App = () => {
         </Route>
         <Route element={<PrivateRoute />}>
           <Route path="/dashboard" element={<Dashboard />} />
-          {/* <Route path="/pomodoro" element={<Pomodoro />} /> */}
+          <Route path="/pomodoro" element={<Pomodoro />} />
         </Route>
         {/* <Route
           path="*"

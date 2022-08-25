@@ -1,30 +1,39 @@
-// export const formatSeconds = (timeInSeconds) => {
-//   const minutes = Math.floor(timeInSeconds / 60);
-//   const seconds = timeInSeconds % 60;
+import React from "react";
 
-//   const mm = minutes.toString().padStart(2, "0");
-//   const ss = seconds.toString().padStart(2, "0");
+export const formatSeconds = (timeInSeconds: number) => {
+  const minutes = Math.floor(timeInSeconds / 60);
+  const seconds = timeInSeconds % 60;
 
-//   const mmss = `${mm}m : ${ss}s`;
+  const mm = minutes.toString().padStart(2, "0");
+  const ss = seconds.toString().padStart(2, "0");
 
-//   return mmss;
-// };
+  const mmss = `${mm}m : ${ss}s`;
 
-// export const startTimer = (timerId, setTimerId, setProgressValue) => {
-//   clearInterval(timerId);
+  return mmss;
+};
 
-//   let temp = setInterval(() => setProgressValue((p) => p + 1), 1000);
+export const startTimer = (
+  timerId: number,
+  setTimerId: React.Dispatch<any>,
+  setProgressValue: React.Dispatch<any>
+) => {
+  clearInterval(timerId);
 
-//   setTimerId(temp);
-// };
+  let temp = setInterval(() => setProgressValue((p: number) => p + 1), 1000);
 
-// export const pauseTimer = (timerId) => {
-//   clearInterval(timerId);
-// };
+  setTimerId(temp);
+};
 
-// export const resetTimer = (timerId, setProgressValue) => {
-//   setProgressValue(0);
-//   clearInterval(timerId);
-// };
+export const pauseTimer = (timerId: number) => {
+  clearInterval(timerId);
+};
+
+export const resetTimer = (
+  timerId: number,
+  setProgressValue: React.Dispatch<any>
+) => {
+  setProgressValue(0);
+  clearInterval(timerId);
+};
 
 export {};
