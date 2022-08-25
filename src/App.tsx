@@ -3,8 +3,8 @@ import { Routes, Route } from "react-router-dom";
 import "./styles/index.css";
 import { NavBar, Footer } from "./components";
 import Logo from "./assets/images/clock_logo.png";
-import { Redirect } from "./router";
-import { Homepage, Login, Signup } from "./pages";
+import { Redirect, PrivateRoute } from "./router";
+import { Homepage, Login, Signup, Dashboard } from "./pages";
 import { getTheme } from "./utils/getTheme";
 import { useTheme } from "./contexts/ThemeContext";
 
@@ -20,11 +20,11 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
         </Route>
-        {/* <Route element={<PrivateRoute />}>
+        <Route element={<PrivateRoute />}>
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/pomodoro" element={<Pomodoro />} />
+          {/* <Route path="/pomodoro" element={<Pomodoro />} /> */}
         </Route>
-        <Route
+        {/* <Route
           path="*"
           element={
             <PageNotFound

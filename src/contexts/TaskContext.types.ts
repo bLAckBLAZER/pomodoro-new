@@ -3,6 +3,7 @@ export type Task = {
   taskTitle: string;
   taskDescription: string;
   taskTime: number;
+  isCompleted: boolean;
 };
 
 export type TaskState = {
