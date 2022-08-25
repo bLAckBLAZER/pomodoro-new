@@ -1,7 +1,7 @@
 import logo from "./logo.svg";
 import { Routes, Route } from "react-router-dom";
 import "./styles/index.css";
-import { NavBar, Footer } from "./components";
+import { NavBar, Footer, PageNotFound } from "./components";
 import Logo from "./assets/images/clock_logo.png";
 import { Redirect, PrivateRoute } from "./router";
 import { Homepage, Login, Signup, Dashboard, Pomodoro } from "./pages";
@@ -24,7 +24,7 @@ const App = () => {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/pomodoro" element={<Pomodoro />} />
         </Route>
-        {/* <Route
+        <Route
           path="*"
           element={
             <PageNotFound
@@ -35,7 +35,7 @@ does not exist.
               gotoPath="/"
             />
           }
-        /> */}
+        />
       </Routes>
       <Footer />
     </div>
