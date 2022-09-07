@@ -1,3 +1,35 @@
+# SubtleClock - Your personal assistant to keep you focus!
+
+Check it out [here](https://subtle-clock-ts.netlify.app/)
+
+
+## Description
+
+This app contains below features as of now:
+
+* Add/Edit/Delete a task
+* Pomodoro Feature (Progress Animation)
+* Start/Pause/Reset timer
+* Dark Mode
+* Title update when timer is running
+* Data Persisitance - Tasks are visible even after page refresh
+
+
+## Tech stack used
+
+* React
+* Typescript
+* Firebase
+* HTML / CSS
+* Subtle UI - Own component library
+* React Router
+* react-circular-progressbar
+
+# Preview
+
+![pomodoro](https://user-images.githubusercontent.com/48726860/162267351-ff0f2a28-833c-4155-ab0c-3371ba9e4277.gif)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
