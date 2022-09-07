@@ -23,8 +23,6 @@ export const removeLocalStorage = (key: string) => {
 };
 
 export const getLocalStorage = (key: string, parseData?: boolean) => {
-  console.log("key", key);
-  console.log("parseData", parseData);
   try {
     if (parseData) {
       return JSON.parse(localStorage.getItem(key) ?? "{}");
