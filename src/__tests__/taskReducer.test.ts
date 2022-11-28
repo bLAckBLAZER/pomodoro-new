@@ -1,5 +1,5 @@
-import { taskReducer } from "../taskReducer";
-import { defaultTaskState } from "../../contexts/defaultTaskState";
+import { taskReducer } from "../reducers/taskReducer";
+import { defaultTaskState } from "../contexts/defaultTaskState";
 
 describe("taskReducer tests", () => {
   test("should add a new task", () => {

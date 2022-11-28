@@ -1,5 +1,5 @@
-import { authReducer } from "../authReducer";
-import { getDefaultAuthState } from "../../contexts/getDefaultAuthState";
+import { authReducer } from "../reducers/authReducer";
+import { getDefaultAuthState } from "../contexts/getDefaultAuthState";
 
 describe("authReducer tests", () => {
   test("should login user", () => {
